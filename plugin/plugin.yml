@@ -1,0 +1,4 @@
+name: EmeraldLib
+main: cn.berberman.emerald.plugin.EmeraldLib
+version: 1.0
+author: berberman
