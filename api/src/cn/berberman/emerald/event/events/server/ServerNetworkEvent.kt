@@ -7,19 +7,18 @@ import java.net.URI
 
 class ServerNetworkEvent(var uri: URI) : Event(), Cancellable {
 	override fun setCancelled(cancel: Boolean) {
-		cancelled = cancel
+		throw NotImplementedError()
 	}
 
-	override fun isCancelled(): Boolean = cancelled
+	override fun isCancelled(): Boolean = throw NotImplementedError()
 
-	private var cancelled = false
 
-	override fun getHandlers(): HandlerList = getHandlerList()
+	override fun getHandlers(): HandlerList = throw NotImplementedError()
 
 	companion object {
 		private val handlers = HandlerList()
 
 		@JvmStatic
-		fun getHandlerList() = handlers
+		fun getHandlerList(): HandlerList = throw NotImplementedError()
 	}
 }

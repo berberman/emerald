@@ -74,7 +74,7 @@ class NBTAttributeTagBuilder : NBTTagBuilder() {
 		@Deprecated("magic value", ReplaceWith("Multiplicative"))
 		MultipleMultiplicative(2);
 
-		fun getNBTValue() = nbtValue
+		fun getNBTValue(): String = throw NotImplementedError()
 	}
 
 

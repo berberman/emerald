@@ -6,7 +6,6 @@ package cn.berberman.emerald.item
 import cn.berberman.emerald.chat.tallraw.TellrawMessage
 import cn.berberman.emerald.item.modifier.NBTAttributeModifier
 import cn.berberman.emerald.item.modifier.NBTRawModifier
-import cn.berberman.emerald.util.safeCast
 import net.md_5.bungee.api.chat.BaseComponent
 import net.md_5.bungee.api.chat.ComponentBuilder
 import org.bukkit.inventory.ItemStack
@@ -20,12 +19,9 @@ fun ItemStack.operateMeta(block: ItemMeta.() -> Unit): ItemStack = throw NotImpl
 
 fun ItemStack.modifyNBTAttribute(block: NBTAttributeModifier.() -> Unit): ItemStack = throw NotImplementedError()
 
-fun ItemStack.modifyNBTRaw(block: NBTRawModifier.() -> Unit): ItemStack = NBTRawModifier(this).apply(block).getResult()
+fun ItemStack.modifyNBTRaw(block: NBTRawModifier.() -> Unit): ItemStack = throw NotImplementedError()
 
-fun ItemStack.operateBookMeta(block: BookMeta.() -> Unit): ItemStack = apply {
-	itemMeta = itemMeta.safeCast<BookMeta>()?.apply(block)
-			?: throw IllegalStateException("This is not a book!")
-}
+fun ItemStack.operateBookMeta(block: BookMeta.() -> Unit): ItemStack = throw NotImplementedError()
 
 fun ItemStack.operateBannerMeta(block: BannerMeta.() -> Unit): ItemStack = throw NotImplementedError()
 

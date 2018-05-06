@@ -12,7 +12,7 @@ class NBTAttributeModifier(itemStack: ItemStack) : NBTModifier(itemStack) {
 	private fun removeAttributeByString(key: String): Unit = throw NotImplementedError()
 
 	fun removeAttributeTagByType(type: NBTAttributeTagBuilder.NBTType): Unit =
-			removeAttributeByString(type.getNBTName())
+			throw NotImplementedError()
 
 	fun removeAttributeTagByName(name: String): Unit =
 			throw NotImplementedError()

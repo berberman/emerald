@@ -9,33 +9,27 @@ sealed class PlayerPacketEvent(player: Player, var msg: Any) : PlayerEvent(playe
 
 
 	override fun setCancelled(cancel: Boolean) {
-		cancelled = cancel
+		throw NotImplementedError()
 	}
 
-	override fun isCancelled(): Boolean = cancelled
-
-	private var cancelled = false
+	override fun isCancelled(): Boolean = throw NotImplementedError()
 
 
 	class PlayerPacketPlayInEvent(player: Player, msg: Any) : PlayerPacketEvent(player, msg) {
-		override fun getHandlers(): HandlerList = getHandlerList()
+		override fun getHandlers(): HandlerList = throw NotImplementedError()
 
 		companion object {
-			private val handlers = HandlerList()
-
 			@JvmStatic
-			fun getHandlerList() = handlers
+			fun getHandlerList(): HandlerList = throw NotImplementedError()
 		}
 	}
 
 	class PlayerPacketPlayOutEvent(player: Player, msg: Any) : PlayerPacketEvent(player, msg) {
-		override fun getHandlers(): HandlerList = getHandlerList()
+		override fun getHandlers(): HandlerList = throw NotImplementedError()
 
 		companion object {
-			private val handlers = HandlerList()
-
 			@JvmStatic
-			fun getHandlerList() = handlers
+			fun getHandlerList(): HandlerList = throw NotImplementedError()
 		}
 	}
 }
