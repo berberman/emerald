@@ -3,13 +3,13 @@ package cn.berberman.emerald.context.supplied
 import cn.berberman.emerald.util.ContextUtil
 
 
-fun info(msg: Any) = ContextUtil.getPluginInstance().logger.info(msg.toString())
+fun info(msg: Any):Unit= throw NotImplementedError()
 
 
-inline fun info(supplier: () -> Any) = info(supplier())
+inline fun info(supplier: () -> Any):Unit = throw NotImplementedError()
 
 
-fun warning(msg: Any) = ContextUtil.getPluginInstance().logger.warning(msg.toString())
+fun warning(msg: Any):Unit = throw NotImplementedError()
 
 
-inline fun warning(supplier: () -> Any) = warning(supplier())
+inline fun warning(supplier: () -> Any):Unit = throw NotImplementedError()

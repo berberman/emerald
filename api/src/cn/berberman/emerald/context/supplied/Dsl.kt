@@ -2,14 +2,18 @@ package cn.berberman.emerald.context.supplied
 
 import cn.berberman.emerald.command.dsl.CommandsBuilder
 import cn.berberman.emerald.event.PackingEvent
-import cn.berberman.emerald.util.ContextUtil
+import cn.berberman.emerald.event.dsl.EventsBuilder
 
 
 fun registerCommands(block: CommandsBuilder.() -> Unit): Unit =
-		cn.berberman.emerald.command.dsl.registerCommands(ContextUtil.getPluginInstance(), block)
+		throw NotImplementedError()
 
-fun PackingEvent<*>.register(): Unit = register(ContextUtil.getPluginInstance())
+fun registerEventListeners(block: EventsBuilder.() -> Unit): EventsBuilder =
+		throw NotImplementedError()
 
-fun PackingEvent<*>.unregister(): Unit = unregister(ContextUtil.getPluginInstance())
+
+fun PackingEvent<*>.register(): Unit = throw NotImplementedError()
+
+fun PackingEvent<*>.unregister(): Unit = throw NotImplementedError()
 
 

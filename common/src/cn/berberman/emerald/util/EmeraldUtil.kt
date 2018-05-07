@@ -28,7 +28,7 @@ object EmeraldUtil {
 	internal val emptyListener = object : Listener {}
 
 
-	inline fun <reified T : JavaPlugin> getPluginBean(): T = JavaPlugin.getPlugin(T::class.java)
+	inline fun <reified T : JavaPlugin> getPluginInstance(): T = JavaPlugin.getPlugin(T::class.java)
 
 
 	val pluginManager: PluginManager = Bukkit.getPluginManager()
