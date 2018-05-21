@@ -2,10 +2,10 @@ package cn.berberman.emerald.plugin
 
 import cn.berberman.emerald.event.events.player.EmeraldChannelHandler
 import cn.berberman.emerald.event.events.server.EmeraldProxySelector
-import cn.berberman.emerald.util.ContextUtil
 import org.bukkit.plugin.java.JavaPlugin
 import java.io.File
 import java.net.ProxySelector
+
 
 class EmeraldLib : JavaPlugin() {
 	private lateinit var configFile: File
@@ -21,12 +21,11 @@ class EmeraldLib : JavaPlugin() {
 		val addNettyHandler = config.getBoolean("addNettyHandler", true)
 		val printDebugMessage = config.getBoolean("debug-message", false)
 
-		ContextUtil.debug = printDebugMessage
-
 		if (useProxySelector)
 			EmeraldProxySelector.init(ProxySelector.getDefault())
 		if (addNettyHandler)
 			EmeraldChannelHandler.register(this)
+
 	}
 
 }
