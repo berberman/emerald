@@ -30,6 +30,7 @@ dependencies {
 	}
 	compile("io.netty:netty-all:4.1.24.Final")
 	"archives"("org.ow2.asm:asm-all:5.2")
+	"archives"("org.jetbrains.kotlinx:kotlinx-coroutines-core:0.22.5")
 
 	configurations.compile.extendsFrom(configurations.getByName("archives"))
 }

@@ -60,10 +60,13 @@ class CommandsBuilder internal constructor() {
 
 
 fun registerCommands(plugin: Plugin, block: CommandsBuilder.() -> Unit) =
-		CommandsBuilder().apply(block).register(plugin)
+		generateCommands(plugin, block).register(plugin)
 
 
 fun CommandsBuilder.register(plugin: Plugin) =
 		register(plugin, EmeraldUtil.commandMap)
+
+fun generateCommands(plugin: Plugin, block: CommandsBuilder.() -> Unit) =
+		CommandsBuilder().apply(block)
 
 typealias Action = CommandScope.() -> CommandResult

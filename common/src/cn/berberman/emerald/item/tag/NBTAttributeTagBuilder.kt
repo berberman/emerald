@@ -139,7 +139,7 @@ class NBTAttributeTagBuilder : NBTTagBuilder() {
 		internal var field = initialValue
 
 		init {
-
+			//force init :P
 			setValue(null, this::field, field)
 		}
 
