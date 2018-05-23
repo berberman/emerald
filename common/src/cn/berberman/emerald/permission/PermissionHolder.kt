@@ -1,6 +1,6 @@
 package cn.berberman.emerald.permission
 
-import cn.berberman.emerald.context.supplied.debug
+import cn.berberman.emerald.abandon.debug
 import cn.berberman.emerald.util.EmeraldUtil.pluginManager
 
 

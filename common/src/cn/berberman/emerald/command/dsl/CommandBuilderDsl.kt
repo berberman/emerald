@@ -1,9 +1,9 @@
 package cn.berberman.emerald.command.dsl
 
+import cn.berberman.emerald.abandon.debug
 import cn.berberman.emerald.command.CommandResult
 import cn.berberman.emerald.command.PackingTabCompleter
 import cn.berberman.emerald.command.annotation.CommandBuilderMarker
-import cn.berberman.emerald.context.supplied.debug
 import org.bukkit.command.CommandSender
 
 

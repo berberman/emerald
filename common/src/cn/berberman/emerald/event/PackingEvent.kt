@@ -1,6 +1,6 @@
 package cn.berberman.emerald.event
 
-import cn.berberman.emerald.context.supplied.debug
+import cn.berberman.emerald.abandon.debug
 import cn.berberman.emerald.reflection.ReflectionUtil
 import cn.berberman.emerald.util.EmeraldUtil
 import org.bukkit.event.Event

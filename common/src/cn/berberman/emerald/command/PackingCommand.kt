@@ -1,8 +1,8 @@
 package cn.berberman.emerald.command
 
+import cn.berberman.emerald.abandon.debug
 import cn.berberman.emerald.command.dsl.Action
 import cn.berberman.emerald.command.dsl.CommandScope
-import cn.berberman.emerald.context.supplied.debug
 import org.bukkit.ChatColor
 import org.bukkit.command.Command
 import org.bukkit.command.CommandSender

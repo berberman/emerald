@@ -1,6 +1,6 @@
 package cn.berberman.emerald.item.tag
 
-import cn.berberman.emerald.context.supplied.debug
+import cn.berberman.emerald.abandon.debug
 import org.apache.commons.lang.math.RandomUtils
 import kotlin.properties.ReadWriteProperty
 import kotlin.reflect.KProperty

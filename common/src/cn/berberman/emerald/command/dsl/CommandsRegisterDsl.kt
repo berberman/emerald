@@ -1,10 +1,10 @@
 package cn.berberman.emerald.command.dsl
 
+import cn.berberman.emerald.abandon.debug
 import cn.berberman.emerald.command.CommandResult
 import cn.berberman.emerald.command.PackingCommand
 import cn.berberman.emerald.command.PackingTabCompleter
 import cn.berberman.emerald.command.annotation.CommonBuilderMarker
-import cn.berberman.emerald.context.supplied.debug
 import cn.berberman.emerald.util.EmeraldUtil
 import org.bukkit.command.Command
 import org.bukkit.command.CommandMap

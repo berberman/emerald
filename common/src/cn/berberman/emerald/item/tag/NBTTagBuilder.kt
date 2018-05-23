@@ -1,6 +1,6 @@
 package cn.berberman.emerald.item.tag
 
-import cn.berberman.emerald.context.supplied.debug
+import cn.berberman.emerald.abandon.debug
 import cn.berberman.emerald.reflection.wrapper.nbt.NmsNBTTagCompound
 
 open class NBTTagBuilder {
