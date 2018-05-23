@@ -1,11 +1,8 @@
 package cn.berberman.emerald.plugin
 
-import cn.berberman.emerald.command.CommandResult
-import cn.berberman.emerald.command.dsl.registerCommands
 import cn.berberman.emerald.event.events.player.EmeraldChannelHandler
 import cn.berberman.emerald.event.events.server.EmeraldProxySelector
 import cn.berberman.emerald.util.EmeraldUtil
-import org.bukkit.entity.Player
 import org.bukkit.plugin.java.JavaPlugin
 import java.io.File
 import java.net.ProxySelector
@@ -36,27 +33,6 @@ class EmeraldLib : JavaPlugin() {
 		if (addNettyHandler)
 			EmeraldChannelHandler.register(this)
 
-
-		registerCommands(this) {
-
-			command("test") {
-				subCommand("a") {
-					action { sender.sendMessage("Hi");CommandResult.Successful }
-				}
-				subCommand("b") {
-					action {
-						whenSenderIs<Player>
-						{
-							it.kickPlayer("GG")
-							CommandResult.Successful
-						} otherwise {
-							sender.sendMessage("你不是玩家")
-							CommandResult.Failed
-						}
-					}
-				}
-			}
-		}
 	}
 
 }
