@@ -3,6 +3,7 @@ package cn.berberman.emerald.plugin
 import cn.berberman.emerald.event.events.player.EmeraldChannelHandler
 import cn.berberman.emerald.event.events.server.EmeraldProxySelector
 import cn.berberman.emerald.util.EmeraldUtil
+import org.bukkit.event.HandlerList
 import org.bukkit.plugin.java.JavaPlugin
 import java.io.File
 import java.net.ProxySelector
@@ -33,6 +34,12 @@ class EmeraldLib : JavaPlugin() {
 		if (addNettyHandler)
 			EmeraldChannelHandler.register(this)
 
+		logger.info("EmeraldLib has been loaded")
+
 	}
 
+	override fun onDisable() {
+		HandlerList.unregisterAll(this)
+		logger.info("EmeraldLib has been disabled")
+	}
 }

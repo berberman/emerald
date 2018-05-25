@@ -29,10 +29,12 @@ dependencies {
 		exclude(group = "org.bukkit")
 	}
 	compile("io.netty:netty-all:4.1.24.Final")
-	"archives"("org.ow2.asm:asm-all:5.2")
-	"archives"("org.jetbrains.kotlinx:kotlinx-coroutines-core:0.22.5")
+	archives("org.ow2.asm:asm-all:5.2")
+	archives("org.jetbrains.kotlinx:kotlinx-coroutines-core:0.22.5") {
+		exclude(group = "org.jetbrains.kotlin", module = "kotlin-stdlib")
+	}
 
-	configurations.compile.extendsFrom(configurations.getByName("archives"))
+	configurations.compile.extendsFrom(configurations.archives)
 }
 
 tasks.withType<Jar> {
@@ -44,7 +46,7 @@ tasks.withType<Jar> {
 	})
 }
 
-
-artifacts {
-	add("archives", tasks.getByName("jar"))
-}
+//
+//artifacts {
+//	add("archives", tasks.getByName("jar"))
+//}

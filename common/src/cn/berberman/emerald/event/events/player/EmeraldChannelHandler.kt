@@ -56,4 +56,9 @@ object EmeraldChannelHandler : ChannelDuplexHandler() {
 		joinInject.register(plugin)
 		quitInject.register(plugin)
 	}
+
+	fun unregister(plugin: Plugin) {
+		joinInject.unregister(plugin)
+		quitInject.unregister(plugin)
+	}
 }
