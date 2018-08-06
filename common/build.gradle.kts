@@ -28,9 +28,9 @@ dependencies {
 	compile("org.spigotmc:spigot-api:$minecraftVersion") {
 		exclude(group = "org.bukkit")
 	}
-	compile("io.netty:netty-all:4.1.24.Final")
+	compile("io.netty:netty-all:4.1.28.Final")
 	archives("org.ow2.asm:asm-all:5.2")
-	archives("org.jetbrains.kotlinx:kotlinx-coroutines-core:0.23.4") {
+	archives("org.jetbrains.kotlinx:kotlinx-coroutines-core:0.24.0") {
 		exclude(group = "org.jetbrains.kotlin", module = "kotlin-stdlib")
 	}
 
