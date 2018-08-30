@@ -17,7 +17,7 @@ jobs:
           - v1-dependencies-{{ checksum "build.gradle" }}
           - v1-dependencies-
 
-      - run: gradle assemble
+      - run: ./gradlew assemble
 
       - store_artifacts:
           path: ~/repo/build/libs
@@ -27,5 +27,5 @@ jobs:
             - ~/.gradle
           key: v1-dependencies-{{ checksum "build.gradle" }}
 
-      - run: gradle check
+      - run: ./gradlew check
 
