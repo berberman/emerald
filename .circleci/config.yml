@@ -16,7 +16,7 @@ jobs:
           keys:
           - v1-dependencies-{{ checksum "build.gradle" }}
           - v1-dependencies-
-
+      - run: chmod a+x gradlew
       - run: ./gradlew assemble
 
       - store_artifacts:
