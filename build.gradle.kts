@@ -7,14 +7,14 @@ buildscript {
 
 	minecraftVersion = "1.12.2-R0.1-SNAPSHOT"
 
-	kotlinVersion = "1.2.60"
+	kotlinVersion = "1.3.11"
 
 	repositories {
 		mavenCentral()
 	}
 	dependencies {
 		classpath(kotlin("gradle-plugin", kotlinVersion))
-		classpath("com.novoda:bintray-release:0.8.1")
+		classpath("com.novoda:bintray-release:+")
 	}
 }
 
