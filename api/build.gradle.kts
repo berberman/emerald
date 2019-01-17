@@ -55,7 +55,7 @@ configure<PublishExtension> {
 	userOrg = "berberman"
 	groupId = "cn.berberman"
 	artifactId = "emerald-api"
-	publishVersion = "1.0"
+	publishVersion = rootProject.version.toString()
 	desc = "the api of Emerald -- a minecraft bukkit plugin lib"
 	website = "https://github.com/berberman/emerald"
 }
