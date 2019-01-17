@@ -3,6 +3,7 @@ package cn.berberman.emerald.command.dsl
 import cn.berberman.emerald.command.CommandResult
 import org.bukkit.command.CommandSender
 
+@CommandScopeDsl
 class CommandScope internal constructor(val sender: CommandSender,
                                         val args: Array<out String>,
                                         name: String,
