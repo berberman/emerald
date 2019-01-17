@@ -30,7 +30,7 @@ dependencies {
 	}
 	compile("io.netty:netty-all:4.1.28.Final")
 	archives("org.ow2.asm:asm-all:5.2")
-	archives("org.jetbrains.kotlinx:kotlinx-coroutines-core:0.24.0") {
+	archives("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.1.0") {
 		exclude(group = "org.jetbrains.kotlin", module = "kotlin-stdlib")
 	}
 
