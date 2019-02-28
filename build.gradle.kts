@@ -5,7 +5,7 @@ buildscript {
 
     extra["minecraftVersion"] = "1.12.2-R0.1-SNAPSHOT"
 
-    kotlinVersion = "1.3.11"
+    kotlinVersion = "1.3.21"
 
     repositories {
         mavenCentral()
